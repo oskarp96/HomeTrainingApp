@@ -1,0 +1,44 @@
+﻿
+@{
+    ViewData["Title"] = "Workouts";
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-2"></div>
+        <div class="col-8">
+            <div class="card-group">
+                <div class="card text-white bg-primary mb-3" style="max-width: 20rem;">
+                    <div class="card-header">Push workout</div>
+                    <img class="card-img-top" src="~/images/pushup.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h4 class="card-title">Push workout</h4>
+                        <p class="card-text">In this push workout, you will workout your chest, shoulders and triceps with exercises such as pushups and dips.</p>
+                        <a class="btn btn-success" asp-controller="Workout" asp-action="PushWorkout">Go to workout</a>
+                    </div>
+                </div>
+                <div class="card text-white bg-primary mb-3" style="max-width: 20rem;">
+                    <div class="card-header">Pull/leg workout</div>
+                    <img class="card-img-top" src="~/images/pull.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h4 class="card-title">Pull/leg workout</h4>
+                        <p class="card-text">In this pull and leg workout, you will workout your back muscles aswell as the leg muscles with exersices such as kettlebell row and pistol squats.</p>
+                        <a class="btn btn-success" asp-controller="Workout" asp-action="PullWorkout">Go to workout</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-2"></div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        $(".nav li").removeClass("active");
+        $('#workouts').addClass('active');
+    </script>
+}
+
+
+

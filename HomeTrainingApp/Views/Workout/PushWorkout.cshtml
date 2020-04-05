@@ -1,0 +1,28 @@
+﻿@model Workout
+@{
+    ViewData["Title"] = "Push workout";
+}
+
+    <div class="container-fluid">
+        <div class="row jumbotron padding" align="center">
+            <div class="col-md-2 col-lg-3"></div>
+            <div class="col-md-8 col-lg-6 col-sm-12 text-center" align="center">
+                @foreach (var exercise in Model.Exercises)
+                {
+                    <div class="card text-white bg-primary mb-3">
+                        <div class="card-header">@exercise.Name</div>
+                        <div class="card-body">
+                            <i class="fas fa-dumbbell" style="color: #ffffff"></i>
+                            <p class="card-text">@exercise.Description</p>
+                            <div class="card-footer">
+                                <small class="text-muted">Sets: @exercise.Sets - Reps: @exercise.Reps - Rest time: @exercise.RestTime</small>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+            <div class="col-md-2 col-lg-3"></div>
+        </div>
+    </div>
+
+
